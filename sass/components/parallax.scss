@@ -51,4 +51,51 @@
             font-size: 10rem;
         }
     }
+
+    &__social-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__social-icon {
+        color: $color-white;
+        transition: all .2s ease-in-out;
+        font-size: 7em;
+
+        &:hover {
+            color: $color-primary-blue;
+            cursor: pointer;
+        }
+
+        @include respond(phone) {
+            font-size: 3em;
+        }
+    }
+
+    &__pad-mid {
+        padding: 0 3rem;
+
+        @include respond(phone) {
+            padding: 0 1.5rem;
+        }
+    }
+
+    &__pad-left {
+        padding-left: 3rem;
+        padding-right: 0;
+
+        @include respond(phone) {
+            padding-left: 1.5rem;
+        }
+    }
+
+    &__pad-right {
+        padding-right: 3rem;
+        padding-left: 0;
+
+        @include respond(phone) {
+            padding-right: 1.5rem;
+        }
+    }
 }

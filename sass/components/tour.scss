@@ -3,7 +3,7 @@
     color: $color-white;
 
     @include respond(phone) {
-        padding: 9rem 0 3rem;
+        padding: 12rem 0 3rem;
     }
 
     &__header {
