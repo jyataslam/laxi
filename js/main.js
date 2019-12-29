@@ -18,9 +18,7 @@ $(document).ready(function() {
 
   $(parallax).parallax({ imageSrc: "/img/photos-one.jpg" });
 
-  fetchEtsy();
   fetchInstagram();
-  fetchBlogPosts();
 
   $(modalTrigger).on("show.bs.modal", e => {
     let imageUrl = $(e.relatedTarget).attr("src");
@@ -49,6 +47,16 @@ $(document).scroll(function() {
 // Handle Loading Animation Fadeout
 $(window).on('load', () => {
   $('#loading').fadeOut();
+  $('.hero__logo').addClass('fade-on-load');
+  setTimeout(function() {
+    $('.hero__music-container1').addClass('fade-on-load');
+  }, 500)
+  setTimeout(function() {
+    $('.hero__music-container2').addClass('fade-on-load');
+  }, 800)
+  setTimeout(function() {
+    $('.hero__music-container3').addClass('fade-on-load');
+  }, 1100)
 })
 
 // Handle Sidenav hamburger click
@@ -139,163 +147,9 @@ $(".contact-link").on("click", e => {
   $("#footer").scrollView();
 });
 
-// Pull data to dynamically create art cards in Art section. This might be destroyed once Etsy API is integrated
-const data = [
-  {
-    id: 1,
-    pic: "/img/art/abstract2.jpg",
-    name: "Art Piece 1",
-    description:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Recusandae odio facere quo corrupti distinctio sapiente expedita animi alias, dolor qui quod fuga, nisi consectetur. Sit voluptatem non natus optio. Voluptatum!",
-    url: "#",
-    materials: "Oil on canvas",
-    price: "$100"
-  },
-  {
-    id: 2,
-    pic: "/img/art/abstract3.jpg",
-    name: "Art Piece 2",
-    description:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Recusandae odio facere quo corrupti distinctio sapiente expedita animi alias, dolor qui quod fuga, nisi consectetur. Sit voluptatem non natus optio. Voluptatum!",
-    url: "#",
-    materials: "Oil on canvas",
-    price: "$300"
-  },
-  {
-    id: 3,
-    pic: "/img/art/abstract4.jpg",
-    name: "Art Piece 3",
-    description:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Recusandae odio facere quo corrupti distinctio sapiente expedita animi alias, dolor qui quod fuga, nisi consectetur. Sit voluptatem non natus optio. Voluptatum!",
-    url: "#",
-    materials: "Oil on canvas",
-    price: "$10200"
-  },
-  {
-    id: 4,
-    pic: "/img/art/abstract5.jpg",
-    name: "Art Piece 4",
-    description:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Recusandae odio facere quo corrupti distinctio sapiente expedita animi alias, dolor qui quod fuga, nisi consectetur. Sit voluptatem non natus optio. Voluptatum!",
-    url: "#",
-    materials: "Oil on canvas",
-    price: "$200"
-  },
-  {
-    id: 5,
-    pic: "/img/art/abstract6.jpg",
-    name: "Art Piece 5",
-    description:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Recusandae odio facere quo corrupti distinctio sapiente expedita animi alias, dolor qui quod fuga, nisi consectetur. Sit voluptatem non natus optio. Voluptatum!",
-    url: "#",
-    materials: "Oil on canvas",
-    price: "$550"
-  },
-  {
-    id: 6,
-    pic: "/img/art/abstract7.jpg",
-    name: "Art Piece 6",
-    description:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Recusandae odio facere quo corrupti distinctio sapiente expedita animi alias, dolor qui quod fuga, nisi consectetur. Sit voluptatem non natus optio. Voluptatum!",
-    url: "#",
-    materials: "Oil on canvas",
-    price: "$120"
-  }
-];
-
-const buildArtCard = art => {
-  const div = $("<div>");
-  const name = $("<h3>");
-  const a = $("<a>");
-  const img = $("<img>");
-  const description = $("<p>");
-  const materials = $("<p>");
-  const price = $("<h3>");
-  const button = $("<button>Buy Now</button>");
-
-  const artRow = $(".art__row");
-  artRow.append(div);
-  name.append(art.name);
-  description.append(art.description);
-  price.append(art.price);
-  materials.append(art.materials);
-  div.append(img);
-  div.append(name, description, materials, price, button);
-
-  description.attr("class", "art__row__text");
-  price.attr("class", "art__row__price");
-  button.attr("class", "general-btn art__row__button");
-
-  a.attr("href", art.url);
-  img.attr({
-    src: art.pic,
-    class: "art__row__image",
-    id: "modalActivate",
-    "data-toggle": "modal",
-    "data-target": "#exampleModalPreview"
-  });
-  div.attr("class", "art__row__container");
-};
-
-// data.forEach(art => buildArtCard(art));
-
-// Fetch Blog Posts from Medium
-const fetchBlogPosts = () => {
-  fetch(
-    "https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@andrewly"
-  )
-    .then(res => res.json())
-    .then(data => {
-      // Filter for acctual posts. Comments don't have categories, therefore can filter for items with categories bigger than 0
-      const res = data.items; //This is an array with the content. No feed, no info about author etc.
-      const posts = res.filter(item => item.categories.length > 0); // That's the main trick* !
-      const postsSliced = posts.slice(0, 4);
-
-      // Functions to create a short text out of whole blog's content
-      function toText(node) {
-        let tag = document.createElement("div");
-        tag.innerHTML = node;
-        node = tag.innerText;
-        return node;
-      }
-      function shortenText(text, startingPoint, maxLength) {
-        return text.length > maxLength
-          ? text.slice(startingPoint, maxLength)
-          : text;
-      }
-
-      // Put things in right spots of markup
-      let output = "";
-      postsSliced.forEach(item => {
-        output += `
-           <li class="blog__post">
-              <a href="${item.link}" target="_blank">
-                 <img src="${item.thumbnail}" class="blog__topImg"></img>
-                 <div class="blog__content">
-                    <div class="blog_preview">
-                       <h3 class="blog__title">${item.title}</h3>
-                       <p class="blog__intro">${"..." +
-                         shortenText(toText(item.content), 40, 330) +
-                         "..."}</p>
-                    </div>
-                    <hr>
-                    <div class="blog__info">
-                       <span class="blog__date">${shortenText(
-                         item.pubDate,
-                         0,
-                         10
-                       )}</span>
-                    </div>
-                 </div>
-              <a/>
-           </li>`;
-      });
-      document.querySelector(".blog__slider").innerHTML = output;
-    });
-};
 
 function fadeInAnimation () {
-  let fadeImage = $('.photos__gray--container__photo');
+  let fadeImage = $('.fade-this-in');
   let windowHeight = $(window).outerHeight();
   let windowTopPosition = $(window).scrollTop();
   let windowBottomPosition = (windowTopPosition + windowHeight);
@@ -307,9 +161,9 @@ function fadeInAnimation () {
       var elBottomPosition = (elTopPosition + elHeight);
 
       if ((elBottomPosition >= windowTopPosition) && (elTopPosition <= windowBottomPosition)){
-          el.addClass('o-fade')
+          el.addClass('fade-on-scroll')
       } else {
-          el.removeClass('o-fade')
+          return
       }
   })
 }

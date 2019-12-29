@@ -533,7 +533,11 @@ body {
   .hero__logo {
     width: 57rem;
     margin: 0 auto;
-    padding-bottom: 4rem; }
+    padding-bottom: 4rem;
+    position: relative;
+    top: 5rem;
+    opacity: 0;
+    transition: all 1s; }
     @media only screen and (max-height: 37.5em) and (orientation: landscape) {
       .hero__logo {
         width: 35rem;
@@ -573,7 +577,10 @@ body {
     margin-right: 6rem;
     position: relative;
     bottom: 0;
-    transition: all .2s ease-in-out; }
+    position: relative;
+    top: 5rem;
+    opacity: 0;
+    transition: all 1s; }
     .hero__music-container:hover {
       bottom: .5rem;
       cursor: pointer; }
@@ -1819,3 +1826,17 @@ Remove or comment-out the code block below to see how the browser will fall-back
     .contact__button:hover {
       color: #e02b0f;
       background: #fff; }
+
+.fade-this-in {
+  position: relative;
+  top: 10rem;
+  opacity: 0;
+  transition: all 1.5s; }
+
+.fade-on-load {
+  opacity: 1;
+  top: 0; }
+
+.fade-on-scroll {
+  opacity: 1;
+  top: 0; }
