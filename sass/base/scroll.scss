@@ -1,0 +1,16 @@
+.fade-this-in {
+    position: relative;
+    top: 15rem;
+    opacity: 0;
+    transition: all 1s;
+}
+
+.fade-on-load {
+    opacity: 1;
+    top: 0;
+}
+
+.fade-on-scroll {
+    opacity: 1;
+    top: 0;
+}
