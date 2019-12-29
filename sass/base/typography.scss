@@ -1,7 +1,4 @@
-@font-face {
-    font-family: Ink;
-    src: url(/fonts/inktank.ttf)
-}
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,600,700&display=swap');
 
 body {
     font-weight: 400;
@@ -10,6 +7,7 @@ body {
     color: $color-black;
     letter-spacing: 0.1rem;
     background: $color-body;
+    font-family: 'Poppins', sans-serif;
 }
 
 .general-btn {

@@ -67,12 +67,11 @@
     <div class="container">
       <div class="row">
         <ul class="sidenav__list">
+          <li class="sidenav__item home-link-sidenav">Home</li>
           <li class="sidenav__item about-link-sidenav">About</li>
-          <li class="sidenav__item work-link-sidenav">Work</li>
+          <li class="sidenav__item work-link-sidenav">Music</li>
           <li class="sidenav__item social-link-sidenav">Social</li>
           <li class="sidenav__item contact-link-sidenav">Contact</li>
-          <a href="https://www.etsy.com/shop/untitled21" target="_blank"
-            class="sidenav__item store-link-sidenav">Store</a>
         </ul>
       </div>
     </div>
@@ -105,7 +104,7 @@
     <div class="container">
       <div class="row">
         <div class="col-sm-12 sidenav__logo-container">
-          <img src="/img/logo-signature.png" class="sidenav__logo-container__logo" alt="Hanna Jennings Logo" />
+          <img src="/img/laxi-logo-nav.png" class="sidenav__logo-container__logo" alt="Laxi Music Band Logo" />
         </div>
       </div>
     </div>
@@ -124,9 +123,13 @@
     <nav id="navigation" class="navigation">
       <div class="navigation__wrapper">
         <div class="navigation__logo-container">
-          <img src="/img/logo-signature.png" class="navigation__logo" alt="Hanna Jennings Logo" />
+          <img src="/img/laxi-logo-nav.png" class="navigation__logo" alt="Laxi music Logo" />
         </div>
         <div class="navigation__list">
+          <p class="navigation__item about-link">About</p>
+          <p class="navigation__item work-link">Music</p>
+          <p class="navigation__item social-link">Social</p>
+          <p class="navigation__item contact-link">Contact</p>
           <div class="navigation__social">
             <a href="https://www.instagram.com/untitlednumber21/" target="_blank"> <svg class="navigation__social__icon"
                 viewBox="0 0 39 39">
@@ -149,118 +152,50 @@
               </svg>
             </a>
           </div>
-          <p class="navigation__item about-link">About</p>
-          <p class="navigation__item work-link">Work</p>
-          <p class="navigation__item social-link">Social</p>
-          <p class="navigation__item contact-link">Contact</p>
-          <a href="https://www.etsy.com/shop/untitled21" target="_blank" class="navigation__item store-link">Store</a>
         </div>
       </div>
     </nav>
     <!-- End of Desktop Nav -->
 
     <!-- Hero section -->
-    <header id="hero" class="hero">
+    <section id="hero" class="hero">
       <div class="container hero__hero-container">
-        <h1 class="hero__title">Hanna Jennings</h1>
-        <h2 class="hero__sub-title">
+        <!-- <h1 class="hero__title"></h1> -->
+        <!-- <h2 class="hero__sub-title">
           <span>Artist & Designer</span>
-        </h2>
-        <button class="btn hero__button">View Work</button>
-        <a href="https://www.etsy.com/shop/untitled21" target="_blank" class="general-btn hero__button--store">
-          Visit Store
-        </a>
-      </div>
-    </header>
-    <!-- End of Hero Section -->
-
-    <!-- Services Section -->
-    <!-- <header id="services" class="services">
-        <h1 class="services__title">Services</h1>
-        <hr class="title__hr" />
-        <div class="container">
-          <div class="row">
-            <section class="services__item">
-              <img
-                src="/img/services-photo.jpg"
-                alt="service photo"
-                class="services__photo"
-              />
-              <h1 class="services__item-title">Peace</h1>
-              <p class="services__text">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum
-                aut libero quibusdam repellendus error, tenetur quas velit esse
-                sequi fugit debitis dolores placeat, ducimus quaerat illo
-                dignissimos commodi labore! Officiis.
-              </p>
-              <button class="general-btn services__btn">Read more</button>
-            </section>
-            <section class="services__item">
-              <img
-                src="/img/services-photo.jpg"
-                alt="service photo"
-                class="services__photo"
-              />
-              <h1 class="services__item-title">Justice</h1>
-              <p class="services__text">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum
-                aut libero quibusdam repellendus error, tenetur quas velit esse
-                sequi fugit debitis dolores placeat, ducimus quaerat illo
-                dignissimos commodi labore! Officiis.
-              </p>
-              <button class="general-btn services__btn">Read more</button>
-            </section>
-            <section class="services__item">
-              <img
-                src="/img/services-photo.jpg"
-                alt="service photo"
-                class="services__photo"
-              />
-              <h1 class="services__item-title">Revenge</h1>
-              <p class="services__text">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum
-                aut libero quibusdam repellendus error, tenetur quas velit esse
-                sequi fugit debitis dolores placeat, ducimus quaerat illo
-                dignissimos commodi labore! Officiis.
-              </p>
-              <button class="btn general-btn services__btn">Read more</button>
-            </section>
+        </h2> -->
+        <img src="/img/laxi-logo-nav.png" alt="laxi music band logo" class="hero__logo">
+        <div class="hero__music-wrapper">
+          <div class="hero__music-container">
+            <i class="fa fa-apple fa-5x fa-fw hero__music-container__icon"></i>
+            <p class="hero__music-container__title">apple music</p>
+          </div>
+          <div class="hero__music-container">
+            <i class="fa fa-spotify fa-5x fa-fw hero__music-container__icon"></i>
+            <p class="hero__music-container__title">spotify</p>
+          </div>
+          <div class="hero__music-container">
+            <i class="fa fa-amazon fa-5x fa-fw hero__music-container__icon"></i>
+            <p class="hero__music-container__title">amazon prime</p>
           </div>
         </div>
-      </header> -->
-    <!-- End of Services Section -->
+        
+      </div>
+    </section>
+    <!-- End of Hero Section -->
 
     <!-- about Section -->
     <div id="about" class="about">
       <div class="container-fluid">
         <div class="row ">
-          <div class="about__wrapper col-lg-6 col-sm-12">
-            <h1 class="about__header">Meet Hanna Jennings</h1>
-            <h3 class="about__subheader">Tyler, TX</h3>
+          <div class="about__wrapper col-sm-12">
+            <h1 class="about__header">Listen on Spotify</h1>
             <p class="about__text">
-              Born and raised in Texas, I have always looked for the unique. I appreciate both the bold and the
-              understated. I strive to express myself and my vision in my art. As a Studio Art major at UT, I am
-              thoroughly enjoying the art culture that flows throughout the city. Austin’s energy continues to influence
-              my art in new and exciting ways. I look forward to learning and growing as an artist. I greatly admire
-              artists like Cy Twombley, Franz Kline and Anthony Lister.
-              <br><br>
-              Recently, I have have begun to work with rougher mediums, like house and spray paints and scrap metal.
-              Combining these with india ink, acrylic and pastels. I have also experimented with sewing techniques,
-              incorporated into my canvases. I always strive for new and different ways to express my art. I dabble in
-              architecture, fashion and graphic design, oil painting and graffiti. The world is my canvas and my
-              inspiration.
+              Listen to our latest single, <i>Zephyr</i>, on Spotify.
             </p>
-            <div class="about__btn-wrapper">
-              <!-- <button class="general-btn about__btn--more">
-                    More About Hanna
-                  </button> -->
-              <button class="general-btn about__btn--more">
-                View Work
-              </button>
-            </div>
           </div>
-          <div class="about__wrapper col-lg-6 col-sm-12">
-            <img src="/img/about-profile-bio.JPG" alt="hanna jennings profile photo" class="about__image" />
+          <div class="about__wrapper col-sm-12">
+            <img src="/img/zephyr-album-cover.jpeg" alt="laxi zephyr spotify album" class="about__image" />
           </div>
         </div>
       </div>
@@ -269,7 +204,7 @@
     <!-- End about Section -->
 
     <!-- Photo Gallery Section -->
-    <header id="photos" class="photos">
+    <!-- <header id="photos" class="photos">
       <div class="container-fluid">
         <div class="row">
           <div class="photos__column">
@@ -318,71 +253,21 @@
           </div>
         </div>
       </div>
-    </header>
+    </header> -->
     <!-- End of Photo Gallery Section -->
 
     <!-- Parallax Image Section -->
-    <section id="parallax" class="parallax" data-parallax="scroll" data-image-src="/img/parallax-background1.jpg">
+    <section id="parallax" class="parallax" data-parallax="scroll" data-image-src="/img/full-band-bw.JPG">
       <div class="container">
         <div class="row">
-          <h4 class="col-sm-12 parallax__text">
-            "The world<br>is my canvas<br>and my inspiration."
-          </h4>
+          <div class="col-sm-12 parallax__text-container">
+            <p class="parallax__text-one">Watch “Zephyr“ Live</p>
+            <i class="fa fa-play-circle parallax__play-icon"></i>
+          </div>
         </div>
       </div>
     </section>
     <!-- End of Parallax Image Section -->
-
-    <!-- Art Section -->
-    <header id="art" class="art">
-      <h1 class="art__title">Work</h1>
-      <!-- <hr class="title__hr art__hr" /> -->
-      <h3 class="art__subheader">All artwork is available for purchase on my Etsy store</h3>
-      <a href="https://www.etsy.com/shop/untitled21" target="_blank" class="general-btn art__button">
-        Visit Store
-      </a>
-      <div class="container-fluid">
-        <div class="row art__row">
-          <!-- Dynamically append art pieces here -->
-        </div>
-      </div>
-    </header>
-    <!-- End of Art Section -->
-
-    <!-- Art Modal Section -->
-    <div class="modal fade right" id="exampleModalPreview" tabindex="-1" role="dialog"
-      aria-labelledby="exampleModalPreviewLabel" aria-hidden="true">
-      <div class="modal-dialog momodel modal-fluid" role="document">
-        <div class="modal-content ">
-          <div class=" modal-header text-center">
-            <button type="button" class="close art-modal-close" data-dismiss="modal" aria-label="Close">
-              <span class="art-close" aria-hidden="true">&times;</span>
-            </button>
-            </button>
-          </div>
-          <div class="modal-body">
-            <img alt="Art Piece" class="modal-image zoom">
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Art Modal Section End -->
-
-    <!-- Request Section -->
-    <header id="request" class="request">
-      <div class="container">
-        <div class="row">
-          <section class="col-sm-12 request__wrapper">
-            <h1 class="request__tagline">Visit Etsy to see the entire collection</h1>
-            <a href="https://www.etsy.com/shop/untitled21" target="_blank"
-              class="general-btn request__btn--consultation">
-              View Store
-            </a>
-          </section>
-        </div>
-      </div>
-    </header>
-    <!-- End of Request Section -->
 
     <!-- Instagram Section -->
     <header id="instagram" class="instagram">
