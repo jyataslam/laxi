@@ -1,7 +1,7 @@
 function fetchInstagram() {
   var token = "7440179262.1677ed0.ebc9d30adcba402abfc9c74a2f4ac668",
     userid = 7440179262,
-    num_photos = 6;
+    num_photos = 12;
 
   $.ajax({
     url: "https://api.instagram.com/v1/users/" + userid + "/media/recent",

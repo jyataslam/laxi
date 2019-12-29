@@ -1,5 +1,5 @@
 .instagram {
-    padding: 16rem 0 100px;
+    padding: 120px 0 120px;
     color: $color-black;
     position: relative;
 
@@ -8,7 +8,7 @@
     }
 
     &__container {
-        max-width: 93.5rem;
+        max-width: 2027px;
     }
 
     &__row {
@@ -16,22 +16,27 @@
     }
 
     &__header {
-        font-family: 'Open Sans Condensed', sans-serif;
-        font-size: 20rem;
+        font-family: 'futura-pt', sans-serif;
+        font-size: 6rem;
         text-align: center;
         padding-bottom: .5rem;
-        font-weight: 700;
-        position: absolute;
-        top: 12%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        color: rgba(0, 0, 0, 0.1);
-        z-index: -1;
+        font-weight: 300;
+        color: $color-white;
+        text-transform: uppercase;
 
         @include respond(phone){
-            top: 10%;
-            font-size: 12rem;
         }
+    }
+
+    &__header-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__header-icon {
+        font-size: 10rem;
+        color: #303030;
     }
 
     &__follow {
@@ -82,29 +87,80 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: space-evenly;
+        padding-top: 4rem;
     }
 
     &__photo {
         height: 27rem;
         width: 27rem;
-        margin: 10px 1px;
+        margin: .5rem;
         overflow: hidden;
         // box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.2);
         background-color: $color-black;
 
         &:hover .instagram__fetched {
-            transform: scale(1.2);
+            transform: scale(1.1);
             opacity: .3;
         }
 
-        @include respond(tab-land){
-            height: 200px;
-            width: 200px;
+        @media only screen and (max-width: 1679px) {
+            height: 26rem;
+            width: 26rem;
         }
 
-        @include respond(phone){
-            height: 150px;
-            width: 150px;
+        @media only screen and (max-width: 1617px) {
+            height: 25rem;
+            width: 25rem;
+        }
+
+        @media only screen and (max-width: 1555px) {
+            height: 23rem;
+            width: 23rem;
+        }
+
+        @media only screen and (max-width: 1346px) {
+            height: 32rem;
+            width: 32rem;
+        }
+
+        @media only screen and (max-width: 1346px) {
+            height: 20rem;
+            width: 20rem;
+        }
+
+        @media only screen and (max-width: 1346px) {
+            height: 19rem;
+            width: 19rem;
+        }
+
+        @media only screen and (max-width: 1080px) {
+            height: 18rem;
+            width: 18rem;
+        }
+
+        @media only screen and (max-width: 1025px) {
+            height: 17rem;
+            width: 17rem;
+        }
+
+        @media only screen and (max-width: 969px) {
+            height: 15rem;
+            width: 15rem;
+        }
+
+        @include respond(tab-port) {
+            height: 20rem;
+            width: 20rem;
+        }
+
+        @media only screen and (max-width: 414px) {
+            height: 14.3rem;
+            width: 14.3rem;
+        }
+
+        @media only screen and (max-width: 375px) {
+            height: 12.8rem;
+            width: 12.8rem;
         }
     }
 
