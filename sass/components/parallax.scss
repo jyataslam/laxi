@@ -18,10 +18,16 @@
     }
 
     &__text-one {
-        font-size: 4rem;
+        font-size: 6rem;
         color: $color-white;
         text-align: center;
         margin: 0 auto;
+        font-family: 'futura-pt', sans-serif;
+        font-weight: 300;
+
+        @include respond(phone) {
+            font-size: 4rem;
+        }
     }
 
     &__logo {
@@ -39,6 +45,10 @@
         &:hover {
             transform: scale(1.2);
             cursor: pointer;
+        }
+
+        @include respond(phone) {
+            font-size: 10rem;
         }
     }
 }
