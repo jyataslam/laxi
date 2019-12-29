@@ -56,7 +56,16 @@
     &__text {
         color: $color-primary-text;
         text-align: center;
-        padding: 0 6rem 4rem;
+        padding: 0 6rem 0rem;
+
+        span {
+            font-style: italic;
+            font-weight: bold;
+        }
+
+        i {
+            font-size: 2rem;
+        }
 
         @include respond(tab-port){
             padding: 0 6rem 2rem;
@@ -86,37 +95,17 @@
         }
     }
 
-    &__btn--more {
-        color: $color-black;
-        border: 2px solid $color-black;
-        margin: inherit;
+    &__button {
+        margin-bottom: 3rem;
+        margin-top: 1rem;
 
         &:hover {
-            cursor: pointer;
-            color: $color-white;
-            background: $color-black;
-        }
-
-        @include respond(phone){
-            margin: 0 auto 1rem;
-        }
-    }
-
-    &__btn--consultation {
-        color: $color-white;
-        background: $color-primary-blue;
-        border: 2px solid $color-primary-blue;
-        margin: inherit;
-
-        &:hover {
-            cursor: pointer;
-            color: $color-black;
             background: $color-white;
-            border: 2px solid $color-primary-blue;
+            color: $color-black;
         }
 
-        @include respond(phone){
-            margin: auto;
+        @include respond(phone) {
+            margin-bottom: 4rem;
         }
     }
 

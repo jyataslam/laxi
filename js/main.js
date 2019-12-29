@@ -84,16 +84,22 @@ $(".navigation__logo, .footer__logo").on("click", e => {
   $("#hero").scrollView();
 });
 
-$(".about-link-sidenav").on("click", e => {
+$(".work-link-sidenav").on("click", e => {
   e.preventDefault();
   handleNavAnimationClick();
   $("#about").scrollView();
 });
 
-$(".work-link-sidenav").on("click", e => {
+$(".home-link-sidenav").on("click", e => {
   e.preventDefault();
   handleNavAnimationClick();
-  $(".art").scrollView();
+  $("#hero").scrollView();
+});
+
+$(".tour-link-sidenav").on("click", e => {
+  e.preventDefault();
+  handleNavAnimationClick();
+  $(".tour").scrollView();
 });
 
 $(".social-link-sidenav").on("click", e => {
@@ -108,15 +114,20 @@ $(".contact-link-sidenav").on("click", e => {
   $("#footer").scrollView();
 });
 
-$(".about-link").on("click", e => {
+$(".work-link").on("click", e => {
   e.preventDefault();
   $("#about").scrollView();
 });
 
-$(".work-link, .hero__button, .about__btn--more").on("click", e => {
+$(".tour-link").on("click", e => {
   e.preventDefault();
-  $(".art").scrollView();
+  $("#tour").scrollView();
 });
+
+// $(".work-link, .hero__button, .about__btn--more").on("click", e => {
+//   e.preventDefault();
+//   $(".art").scrollView();
+// });
 
 $(".social-link").on("click", e => {
   e.preventDefault();
