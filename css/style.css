@@ -459,7 +459,7 @@ body {
   overflow-y: scroll;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   transition: .5s; }
   .sidenav .row {
@@ -491,6 +491,7 @@ body {
     display: flex; }
     .sidenav__logo-container__logo {
       width: 28rem;
+      height: 12rem;
       padding-top: 3rem;
       margin: 0 auto; }
 
