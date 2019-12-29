@@ -14,6 +14,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
   }
 
   &__social-icon {
@@ -23,6 +24,37 @@
       &:hover {
           color: $color-primary-blue;
       }
+  }
+
+  &__container {
+    display: none;
+
+    @include respond(phone) {
+      display: block;
+      padding-bottom: 7rem;
+    }
+  }
+
+  &__name {
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    letter-spacing: .5rem;
+    font-weight: 300;
+
+    span {
+      font-weight: 600;
+    }
+  }
+
+  &__social-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__social-icon-mobile {
+    font-size: 3rem;
+    padding: 0 2rem
   }
 }
 
@@ -108,7 +140,23 @@ figure.effect-hera h2 {
   font-size: 158.75%;
 }
 
-figure.effect-hera h2,
+figure.effect-hera h2 {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+  -webkit-transform: translate3d(-50%, -50%, 0);
+  transform: translate3d(-50%, -50%, 0);
+  -webkit-transform-origin: 50%;
+  transform-origin: 50%;
+  width: 100%;
+
+  @include respond(phone) {
+    display: none;
+  }
+}
+
 figure.effect-hera p {
   position: absolute;
   top: 50%;
@@ -119,6 +167,10 @@ figure.effect-hera p {
   transform: translate3d(-50%, -50%, 0);
   -webkit-transform-origin: 50%;
   transform-origin: 50%;
+
+  @include respond(phone) {
+    display: none;
+  }
 }
 
 figure.effect-hera figcaption::before {
@@ -138,6 +190,10 @@ figure.effect-hera figcaption::before {
     scale3d(0, 0, 1);
   -webkit-transform-origin: 50%;
   transform-origin: 50%;
+
+  @include respond(phone) {
+    display: none;
+  }
 }
 
 figure.effect-hera p {
@@ -154,6 +210,10 @@ figure.effect-hera p a {
 figure.effect-hera p a:hover,
 figure.effect-hera p a:focus {
   opacity: 0.6;
+
+  @include respond(phone) {
+    display: none;
+  }
 }
 
 figure.effect-hera p a i {
@@ -161,6 +221,10 @@ figure.effect-hera p a i {
   font-size: 3rem;
   -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
   transition: opacity 0.35s, transform 0.35s;
+
+  @include respond(phone) {
+    display: none;
+  }
 }
 
 figure.effect-hera p a:first-child i {

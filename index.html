@@ -16,7 +16,7 @@
   <meta property="og:description" content="LAXI">
   <meta property="og:url" content="https://www.laximusic.com">
   <meta property="og:site_name" content="LAXI">
-  <meta property="og:image" content="https://www.laximusic.com/img/laxi-color-dark.jpg">
+  <meta property="og:image" content="http://laxi.jasonyata.com/img/laxi-logo-nav.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
 
@@ -175,7 +175,7 @@
             </div>
           </a>
         </div>
-        
+
       </div>
     </section>
     <!-- End of Hero Section -->
@@ -189,7 +189,8 @@
             <p class="about__text">
               Listen to our latest single, <span>Zephyr</span>, on Spotify <i class="fa fa-spotify"></i>
             </p>
-            <a href="https://open.spotify.com/artist/0RDbgwee6qex2cwJoakw7u" target="_blank" class="general-btn about__button">Launch Spotify</a>
+            <a href="https://open.spotify.com/artist/0RDbgwee6qex2cwJoakw7u" target="_blank"
+              class="general-btn about__button">Launch Spotify</a>
           </div>
           <div class="about__wrapper col-sm-12">
             <img src="/img/zephyr-album-cover.jpeg" alt="laxi zephyr spotify album" class="about__image" />
@@ -200,70 +201,39 @@
     </div>
     <!-- End about Section -->
 
-    <!-- Photo Gallery Section -->
-    <!-- <header id="photos" class="photos">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="photos__column">
-            <img src="/img/art-1.jpg" alt="Hanna Jennings original Art Piece" class="photos__photo" />
-            <img src="/img/art-2.png" alt="Hanna Jennings original Art Piece" class="photos__photo" />
-          </div>
-          <div class="photos__column">
-            <img src="/img/art-3.png" alt="Hanna Jennings original Art Piece" class="photos__photo" />
-            <img src="/img/art-4.png" alt="Hanna Jennings original Art Piece" class="photos__photo" />
-          </div>
-          <div class="photos__column">
-            <img src="/img/art-5.png" alt="Hanna Jennings original Art Piece" class="photos__photo" />
-            <img src="/img/art-8.jpg" alt="Hanna Jennings original Art Piece" class="photos__photo" />
-          </div>
-          <div class="photos__column">
-            <img src="/img/art-7.jpg" alt="Hanna Jennings original Art Piece" class="photos__photo" />
-            <img src="/img/art-6.jpg" alt="Hanna Jennings original Art Piece" class="photos__photo" />
-          </div>
-        </div>
-      </div>
-      <div class="container-fluid photos__gray--container">
-        <div class="row">
-          <div class="photos__gray--container__column">
-            <img src="/img/art-1-bw.jpeg" alt="Hanna Jennings original Art Piece"
-              class="photos__gray--container__photo" />
-            <img src="/img/art-2-bw.png" alt="Hanna Jennings original Art Piece"
-              class="photos__gray--container__photo" />
-          </div>
-          <div class="photos__gray--container__column">
-            <img src="/img/art-3-bw.png" alt="Hanna Jennings original Art Piece"
-              class="photos__gray--container__photo" />
-            <img src="/img/art-4-bw.png" alt="Hanna Jennings original Art Piece"
-              class="photos__gray--container__photo" />
-          </div>
-          <div class="photos__gray--container__column">
-            <img src="/img/art-5-bw.png" alt="Hanna Jennings original Art Piece"
-              class="photos__gray--container__photo" />
-            <img src="/img/art-8-bw.jpeg" alt="Hanna Jennings original Art Piece"
-              class="photos__gray--container__photo" />
-          </div>
-          <div class="photos__gray--container__column">
-            <img src="/img/art-7-bw.jpeg" alt="Hanna Jennings original Art Piece"
-              class="photos__gray--container__photo" />
-            <img src="/img/art-6-bw.jpeg" alt="Hanna Jennings original Art Piece"
-              class="photos__gray--container__photo" />
-          </div>
-        </div>
-      </div>
-    </header> -->
-    <!-- End of Photo Gallery Section -->
-
     <!-- Parallax Image Section -->
-    <section id="parallax" class="parallax" data-parallax="scroll" data-image-src="/img/full-band-bw.JPG">
+    <section id="parallax" class="parallax" data-parallax="scroll" data-image-src="/img/full-band-bw-compressor.jpg">
       <div class="container">
         <div class="row">
           <div class="col-sm-12 parallax__text-container">
             <p class="parallax__text-one">Watch “Zephyr“ Live</p>
-            <i class="fa fa-play-circle parallax__play-icon"></i>
+            <i class="fa fa-play-circle parallax__play-icon launch-modal" data-toggle="modal"
+              data-target="#modal-video"></i>
           </div>
         </div>
       </div>
     </section>
+
+    <div class="modal fade" id="modal-video" tabindex="-1" role="dialog" aria-labelledby="modal-video-label">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="modal-video">
+              <div class="embed-responsive embed-responsive-16by9">
+                <iframe src="https://www.youtube.com/embed/l0HJkM_2zws" frameborder="0"
+                  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <!-- End of Parallax Image Section -->
 
     <!-- Tour Section -->
@@ -301,46 +271,77 @@
     <header id="members" class="members">
       <div class="container">
         <div class="row">
-          <div class="col-sm-12 col-md-4 members__wrapper">
+          <div class="col-sm-12 col-md-6 col-lg-4 members__wrapper">
 
             <figure class="effect-hera">
-              <img src="/img/art-1.jpg" alt="img25"/>
+              <img src="/img/chris-laxamana-headshot-compressor.jpeg" alt="img25" />
               <figcaption>
                 <h2>Chris <span>Laxamana</span></h2>
                 <p>
-                  <a href="https://www.instagram.com/chrislaxamana1" target="_blank"><i class="fa fa-instagram fa-2x members__social-icon"></i></a>
-                  <a href="https://twitter.com/chrislaxamana" target="_blank"><i class="fa fa-twitter members__social-icon"></i></a>
+                  <a href="https://www.instagram.com/chrislaxamana1" target="_blank"><i
+                      class="fa fa-instagram fa-2x members__social-icon"></i></a>
+                  <a href="https://twitter.com/chrislaxamana" target="_blank"><i
+                      class="fa fa-twitter members__social-icon"></i></a>
                 </p>
-              </figcaption>			
+              </figcaption>
             </figure>
+            <div class="members__container">
+              <p class="members__name">Chris <span>Laxamana</span></p>
+              <div class="members__social-container">
+                <a href="https://www.instagram.com/chrislaxamana1" target="_blank"><i
+                    class="fa fa-instagram fa-2x members__social-icon-mobile"></i></a>
+                <a href="https://twitter.com/chrislaxamana" target="_blank"><i
+                    class="fa fa-twitter members__social-icon-mobile"></i></a>
+              </div>
+            </div>
 
           </div>
-          <div class="col-sm-12 col-md-4 members__wrapper">
+          <div class="col-sm-12 col-md-6 col-lg-4 members__wrapper">
 
             <figure class="effect-hera">
-              <img src="/img/art-1.jpg" alt="img25"/>
+              <img src="/img/mike-weiland-headshot-compressor.jpeg" alt="img25" />
               <figcaption>
                 <h2>Mike <span>Weiland</span></h2>
                 <p>
-                  <a href="https://www.instagram.com/mikeyweiland/" target="_blank"><i class="fa fa-instagram fa-2x members__social-icon"></i></a>
-                  <a href="https://twitter.com/mikeyweilandjr" target="_blank"><i class="fa fa-twitter members__social-icon"></i></a>
+                  <a href="https://www.instagram.com/mikeyweiland/" target="_blank"><i
+                      class="fa fa-instagram fa-2x members__social-icon"></i></a>
+                  <a href="https://twitter.com/mikeyweilandjr" target="_blank"><i
+                      class="fa fa-twitter members__social-icon"></i></a>
                 </p>
-              </figcaption>			
+              </figcaption>
             </figure>
+            <div class="members__container">
+              <p class="members__name">Mike <span>Weiland</span></p>
+              <div class="members__social-container">
+                <a href="https://www.instagram.com/mikeyweiland/" target="_blank"><i
+                  class="fa fa-instagram fa-2x members__social-icon-mobile"></i></a>
+              <a href="https://twitter.com/mikeyweilandjr" target="_blank"><i
+                  class="fa fa-twitter members__social-icon-mobile"></i></a>
+              </div>
+            </div>
 
           </div>
-          <div class="col-sm-12 col-md-4 members__wrapper">
+          <div class="col-sm-12 col-md-6 col-lg-4 members__wrapper">
 
             <figure class="effect-hera">
-              <img src="/img/art-1.jpg" alt="img25"/>
+              <img src="/img/will-purtle-headshot-compressor.jpeg" alt="img25" />
               <figcaption>
                 <h2>Will <span>Purtle</span></h2>
                 <p>
-                  <a href="https://www.instagram.com/chrislaxamana1" target="_blank"><i class="fa fa-instagram fa-2x members__social-icon"></i></a>
-                  <a href="https://twitter.com/chrislaxamana" target="_blank"><i class="fa fa-twitter members__social-icon"></i></a>
+                  <a href="https://www.instagram.com/wil_man_5000/" target="_blank"><i
+                      class="fa fa-instagram fa-2x members__social-icon"></i></a>
+                  <!-- <a href="https://twitter.com/chrislaxamana" target="_blank"><i
+                      class="fa fa-twitter members__social-icon"></i></a> -->
                 </p>
-              </figcaption>			
+              </figcaption>
             </figure>
+            <div class="members__container">
+              <p class="members__name">Will <span>Purtle</span></p>
+              <div class="members__social-container">
+                <a href="https://www.instagram.com/wil_man_5000/" target="_blank"><i
+                  class="fa fa-instagram fa-2x members__social-icon-mobile"></i></a>
+              </div>
+            </div>
 
           </div>
         </div>
@@ -359,18 +360,19 @@
       </div>
       <div class="container-fluid instagram__container">
         <div class="row instagram__photo--container">
-            <!-- Dynamically append IG feed here -->
+          <!-- Dynamically append IG feed here -->
         </div>
       </div>
     </header>
     <!-- End of Instagram Section -->
 
     <!-- Parallax Image Section -->
-    <section id="parallax" class="parallax" data-parallax="scroll" data-image-src="/img/landing-image.jpg">
+    <section id="parallax" class="parallax" data-parallax="scroll" data-image-src="/img/laxi-full-band-second-parallax-compressor.jpg">
       <div class="container">
         <div class="row">
           <div class="col-sm-12 parallax__social-container">
-            <a href="https://open.spotify.com/artist/0RDbgwee6qex2cwJoakw7u" class="parallax__pad-right" target="_blank">
+            <a href="https://open.spotify.com/artist/0RDbgwee6qex2cwJoakw7u" class="parallax__pad-right"
+              target="_blank">
               <i class="fa fa-spotify fa-5x fa-fw parallax__social-icon"></i>
             </a>
             <a href="https://music.apple.com/us/artist/laxi/1263295949" class="parallax__pad-mid" target="_blank">
@@ -385,7 +387,8 @@
             <a href="https://twitter.com/laximusic" class="parallax__pad-mid" target="_blank">
               <i class="fa fa-twitter fa-5x fa-fw parallax__social-icon"></i>
             </a>
-            <a href="https://www.youtube.com/channel/UCcQ2D4efsSDL3-rI3EHeKgA" class="parallax__pad-left" target="_blank">
+            <a href="https://www.youtube.com/channel/UCcQ2D4efsSDL3-rI3EHeKgA" class="parallax__pad-left"
+              target="_blank">
               <i class="fa fa-youtube-play fa-5x fa-fw parallax__social-icon"></i>
             </a>
           </div>
