@@ -1,6 +1,7 @@
 .about {
-    padding: 8rem 0 5rem;
+    padding: 120px 0 120px;
     position: relative;
+    color: $color-white;
 
     @include respond(phone){
         padding: 7rem 0 1rem;
@@ -19,7 +20,7 @@
     }
 
     &__image {
-        width: 85%;
+        width: 40%;
         margin: auto;
         box-shadow: 2px 3px 8px rgba(0, 0, 0, 0.2);
 
@@ -29,9 +30,11 @@
     }
     
     &__header {
-        font-family: 'Open Sans Condensed', sans-serif;
+        font-family: 'Poppins', sans-serif;
         font-size: 3.5rem;
+        font-weight: 600;
         text-align: center;
+        padding-bottom: 2rem;
 
         @include respond(phone){
             font-size: 4rem;
@@ -51,8 +54,8 @@
 
     &__text {
         color: $color-primary-text;
-        text-align: left;
-        padding: 0 6rem 2rem;
+        text-align: center;
+        padding: 0 6rem 4rem;
 
         @include respond(tab-port){
             padding: 0 6rem 2rem;

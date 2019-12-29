@@ -15,6 +15,7 @@ ORDER: Base + typography > general layout + grid > page layout > components
 
 1em = 16px
 */
+@import url("https://fonts.googleapis.com/css?family=Poppins:300,400,600,700&display=swap");
 @import url(/node_modules/magnify/dist/css/magnify.css);
 @keyframes span-first-on {
   0% {
@@ -96,9 +97,11 @@ body {
     body {
       padding: 0; } }
 
-@media only screen and (max-width: 37.5em) {
-  p {
-    font-size: 1.4rem; } }
+p {
+  font-size: 1.6rem; }
+  @media only screen and (max-width: 37.5em) {
+    p {
+      font-size: 1.4rem; } }
 
 .main {
   transition: .5s; }
@@ -115,17 +118,14 @@ body {
 *:focus {
   outline: none !important; }
 
-@font-face {
-  font-family: Ink;
-  src: url(/fonts/inktank.ttf); }
-
 body {
   font-weight: 400;
   /*font-size: 16px;*/
   line-height: 1.7;
   color: #000;
   letter-spacing: 0.1rem;
-  background: #fff; }
+  background: #141618;
+  font-family: 'Poppins', sans-serif; }
 
 .general-btn {
   font-size: 1.4rem;
@@ -225,12 +225,13 @@ body {
   width: 100%;
   background-color: transparent;
   z-index: 1;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
   transition: all .5s ease-in-out; }
   @media only screen and (max-width: 56.25em) {
     .navigation {
       position: fixed;
       top: 0;
-      background: white;
+      background: transparent;
       height: 64px;
       box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.4); } }
   @media only screen and (max-width: 37.5em) {
@@ -239,14 +240,13 @@ body {
   .navigation__wrapper {
     display: flex;
     max-width: 1800px;
-    padding-top: 40px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     margin-left: auto;
     margin-right: auto;
     padding-left: 50px;
     padding-right: 50px;
     transition: all .5s ease-in-out; }
-    .navigation__wrapper__scrolled {
-      padding-top: 0; }
     @media only screen and (max-width: 56.25em) {
       .navigation__wrapper {
         padding: 0 0 0 25px;
@@ -267,14 +267,9 @@ body {
     min-width: 0;
     max-width: 100%; }
   .navigation__logo {
-    height: 6rem;
-    -webkit-filter: invert(100);
-    filter: invert(100); }
+    height: 3rem; }
     .navigation__logo:hover {
       cursor: pointer; }
-    .navigation__logo__scrolled {
-      -webkit-filter: invert(0);
-      filter: invert(0); }
     @media only screen and (max-width: 56.25em) {
       .navigation__logo {
         margin-bottom: 0; } }
@@ -308,13 +303,14 @@ body {
     transition: all .5s ease; }
   .navigation__item {
     color: #fff;
-    padding: 1rem 2rem;
+    padding: 1rem;
     text-transform: uppercase;
     transition: all .2s ease-in-out;
     letter-spacing: .15rem;
-    font-size: 1.6rem;
+    font-size: 1.2rem;
     margin-bottom: 0;
-    line-height: 2.2; }
+    line-height: 3.2;
+    font-weight: 600; }
     .navigation__item:hover {
       text-decoration: none;
       color: #e02b0f;
@@ -324,23 +320,20 @@ body {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    margin-right: 3rem; }
+    margin-left: 3rem; }
     .navigation__social__icon {
-      height: 2.5rem;
+      height: 2rem;
       padding: 0 1rem;
       fill: #fff;
       transition: all .5s; }
       .navigation__social__icon:hover {
         fill: #e02b0f; }
   .navigation__nav-scrolled {
-    background: #fff;
-    border-bottom: 0.5rem solid #000; }
+    background: #141618;
+    border-bottom: none; }
     @media only screen and (max-width: 56.25em) {
       .navigation__nav-scrolled {
         border-bottom: none; } }
-  .navigation__links-scrolled {
-    color: #000;
-    fill: #000; }
 
 .hamburger {
   background-color: transparent;
@@ -395,7 +388,6 @@ body {
     transition: all 0.3s linear; }
     @media only screen and (max-width: 56.25em) {
       .hamburger__span {
-        background: black;
         height: 1px; } }
     @media only screen and (max-width: 37.5em) {
       .hamburger__span {
@@ -445,16 +437,23 @@ body {
   z-index: 1;
   top: 0;
   right: 0;
-  background: #e02b0f;
+  background: #141618;
   padding: 50px 0;
   transform: translateX(100vw);
+  overflow-y: scroll;
   transition: .5s; }
+  .sidenav .row {
+    justify-content: center; }
   .sidenav__list {
     list-style-type: none;
     color: rgba(39, 39, 39, 0.753);
     letter-spacing: 0.2rem;
-    margin: 0 0 0 2rem;
-    padding: 0; }
+    padding: 0;
+    text-align: center;
+    padding-top: 7rem; }
+    @media only screen and (max-height: 37.5em) and (orientation: landscape) {
+      .sidenav__list {
+        padding-top: 2rem; } }
   .sidenav__item {
     color: white;
     font-size: 4rem;
@@ -462,15 +461,18 @@ body {
   .sidenav__social {
     display: flex;
     flex-direction: row;
-    justify-content: left;
+    justify-content: center;
     padding-top: 5rem; }
     .sidenav__social__icon {
       height: 5rem;
       padding: 0 2rem 0 0;
       fill: #fff; }
-  .sidenav__logo-container__logo {
-    width: 28rem;
-    padding-top: 3rem; }
+  .sidenav__logo-container {
+    display: flex; }
+    .sidenav__logo-container__logo {
+      width: 28rem;
+      padding-top: 3rem;
+      margin: 0 auto; }
 
 .store-link-sidenav:hover {
   text-decoration: none;
@@ -489,26 +491,35 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: url(/img/hero-background-redhead.jpg);
+  background: url(/img/laxi-color-dark.jpg);
   min-height: 100vh;
   color: #fff;
-  background-attachment: scroll;
+  background-attachment: fixed;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center; }
   @media only screen and (max-width: 56.25em) {
     .hero {
-      margin-top: 7rem;
-      min-height: 94vh; } }
+      min-height: 100vh;
+      background-attachment: scroll; } }
   @media only screen and (max-width: 37.5em) {
     .hero {
-      min-height: 100vh;
       margin-top: 0;
-      border: none; } }
+      background-position-x: 37%; } }
   .hero__hero-container {
     display: flex;
-    flex-direction: column;
-    padding-bottom: 7vh; }
+    flex-direction: column; }
+  .hero__logo {
+    width: 57rem;
+    margin: 0 auto;
+    padding-bottom: 4rem; }
+    @media only screen and (max-height: 37.5em) and (orientation: landscape) {
+      .hero__logo {
+        width: 35rem;
+        padding-top: 7rem; } }
+    @media only screen and (max-width: 37.5em) {
+      .hero__logo {
+        width: 36rem; } }
   .hero__title {
     font-family: 'Open Sans Condensed', sans-serif;
     font-weight: 400;
@@ -530,6 +541,26 @@ body {
     font-size: 1.6rem;
     text-transform: uppercase;
     letter-spacing: 0.13rem; }
+  .hero__music-wrapper {
+    display: flex;
+    justify-content: center; }
+  .hero__music-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 6rem;
+    margin-right: 6rem; }
+    @media only screen and (max-width: 37.5em) {
+      .hero__music-container {
+        margin-left: 3rem;
+        margin-right: 3rem; } }
+    .hero__music-container__title {
+      text-transform: uppercase;
+      font-size: 1.2rem;
+      letter-spacing: .3rem;
+      font-weight: 600;
+      padding-top: 2.5rem;
+      text-align: center; }
   .hero__button {
     font-size: 1.4rem;
     margin: 1.5rem auto 0;
@@ -589,7 +620,7 @@ body {
     text-align: center;
     color: #000; }
   .services__text {
-    color: #666666;
+    color: #c9c9c9;
     padding-top: 1rem;
     text-align: center; }
     @media only screen and (max-width: 37.5em) {
@@ -665,20 +696,33 @@ body {
   @media only screen and (max-width: 37.5em) {
     .parallax {
       min-height: 350px; } }
-  .parallax__text {
-    font-size: 6rem;
+  .parallax__text-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; }
+  .parallax__text-one {
+    font-size: 4rem;
     color: #fff;
     text-align: center;
-    margin: 0 auto;
-    text-align: left; }
+    margin: 0 auto; }
   .parallax__logo {
     -webkit-filter: invert(100);
     filter: invert(100);
     height: 18rem; }
+  .parallax__play-icon {
+    margin: 1rem auto 0;
+    font-size: 12rem;
+    color: white;
+    transition: all .3s ease-in-out; }
+    .parallax__play-icon:hover {
+      transform: scale(1.2);
+      cursor: pointer; }
 
 .about {
-  padding: 8rem 0 5rem;
-  position: relative; }
+  padding: 120px 0 120px;
+  position: relative;
+  color: #fff; }
   @media only screen and (max-width: 37.5em) {
     .about {
       padding: 7rem 0 1rem; } }
@@ -691,16 +735,18 @@ body {
       .about .row {
         padding-bottom: 4rem; } }
   .about__image {
-    width: 85%;
+    width: 40%;
     margin: auto;
     box-shadow: 2px 3px 8px rgba(0, 0, 0, 0.2); }
     @media only screen and (max-width: 37.5em) {
       .about__image {
         width: 100%; } }
   .about__header {
-    font-family: 'Open Sans Condensed', sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-size: 3.5rem;
-    text-align: center; }
+    font-weight: 600;
+    text-align: center;
+    padding-bottom: 2rem; }
     @media only screen and (max-width: 37.5em) {
       .about__header {
         font-size: 4rem; } }
@@ -713,9 +759,9 @@ body {
       .about__subheader {
         font-size: 2.4rem; } }
   .about__text {
-    color: #666666;
-    text-align: left;
-    padding: 0 6rem 2rem; }
+    color: #c9c9c9;
+    text-align: center;
+    padding: 0 6rem 4rem; }
     @media only screen and (max-width: 56.25em) {
       .about__text {
         padding: 0 6rem 2rem; } }
@@ -833,7 +879,7 @@ body {
   font-family: inherit;
   text-align: center;
   border-radius: 2rem;
-  color: #666666; }
+  color: #c9c9c9; }
 
 .mapboxgl-popup-close-button {
   right: 1rem;
@@ -933,7 +979,7 @@ body {
     .art__row__text {
       font-size: 1.2rem;
       padding: 1rem 4rem;
-      color: #666666; }
+      color: #c9c9c9; }
     .art__row__button {
       border: 2px solid #000;
       color: #fff;
@@ -1403,17 +1449,17 @@ Remove or comment-out the code block below to see how the browser will fall-back
     text-align: center; }
   .blog__intro {
     line-height: 1.5;
-    color: #666666; }
+    color: #c9c9c9; }
   .blog__info {
     font-weight: 300;
-    color: #666666; }
+    color: #c9c9c9; }
   .blog__author {
     font-size: 0.9rem; }
   .blog__date {
     font-size: 0.85rem; }
 
 .footer {
-  background-color: #252525;
+  background-color: #141618;
   padding: 5rem 0 2rem;
   color: #fff; }
   .footer__logo--container {
@@ -1509,14 +1555,14 @@ Remove or comment-out the code block below to see how the browser will fall-back
     margin: 0 auto 1rem;
     text-align: center; }
   .contact__text {
-    color: #666666;
+    color: #c9c9c9;
     font-weight: 100;
     margin: 0 auto 2rem;
     text-align: center; }
   .contact__preference {
     margin: 0;
     font-size: 1.2rem;
-    color: #666666; }
+    color: #c9c9c9; }
     @media only screen and (max-width: 37.5em) {
       .contact__preference {
         font-size: 8px;
